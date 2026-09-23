@@ -139,25 +139,6 @@ void zad7()
     printf("e = %.14f\n", e);
 }
 
-void lab2()
-{
-    int n;
-    do
-    {
-        printf("\nЛаба 2. Номер задания (1-7), 0 - назад: ");
-        scanf_s("%i", &n);
-        while (getchar() != '\n');
-        if (n == 1) zad1();
-        else if (n == 2) zad2();
-        else if (n == 3) zad3();
-        else if (n == 4) zad4();
-        else if (n == 5) zad5();
-        else if (n == 6) zad6();
-        else if (n == 7) zad7();
-        else if (n != 0) printf("Нет такого задания\n");
-    } while (n != 0);
-}
-
 // ---------- Лаба 3 ----------
 
 void lab3()
@@ -246,17 +227,20 @@ int main()
     setlocale(LC_ALL, "Russian");
     setlocale(LC_NUMERIC, "C");
 
-    int k;
-    do
-    {
-        printf("\n1 - Лаба 2, 2 - Лаба 3, 3 - Лаба 4, 0 - выход: ");
-        scanf_s("%i", &k);
-        while (getchar() != '\n');
-        if (k == 1) lab2();
-        else if (k == 2) lab3();
-        else if (k == 3) lab4();
-        else if (k != 0) printf("Нет такого пункта\n");
-    } while (k != 0);
+    // Лаба 2
+    zad1();
+    zad2();
+    zad3();
+    zad4();
+    zad5();
+    zad6();
+    zad7();
+
+    // Лаба 3
+    lab3();
+
+    // Лаба 4
+    lab4();
 
     return 0;
 }
