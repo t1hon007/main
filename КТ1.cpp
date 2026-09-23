@@ -164,32 +164,32 @@ void lab3()
 {
     // задание 1: снизу парабола y=2x^2, сверху окружность (x-1)^2+y^2=4
     double x, y;
-    printf("Введите x и y: ");
-    scanf_s("%lf%lf", &x, &y);
+    cout << "Введите x и y: ";
+    cin >> x >> y;
     if (y >= 2 * x * x && (x - 1) * (x - 1) + y * y <= 4)
-        printf("Точка попадает в область\n");
+        cout << "Точка попадает в область" << endl;
     else
-        printf("Точка не попадает в область\n");
+        cout << "Точка не попадает в область" << endl;
 
     // задание 2: победитель конкурса
     double m1, n1, p1, m2, n2, p2, m3, n3, p3;
-    printf("Баллы Иванова: ");
-    scanf_s("%lf%lf%lf", &m1, &n1, &p1);
-    printf("Баллы Петрова: ");
-    scanf_s("%lf%lf%lf", &m2, &n2, &p2);
-    printf("Баллы Сидорова: ");
-    scanf_s("%lf%lf%lf", &m3, &n3, &p3);
+    cout << "Баллы Иванова: ";
+    cin >> m1 >> n1 >> p1;
+    cout << "Баллы Петрова: ";
+    cin >> m2 >> n2 >> p2;
+    cout << "Баллы Сидорова: ";
+    cin >> m3 >> n3 >> p3;
 
     double s1 = m1 + n1 + p1;
     double s2 = m2 + n2 + p2;
     double s3 = m3 + n3 + p3;
 
     if (s1 >= s2 && s1 >= s3)
-        printf("Победил Иванов\n");
+        cout << "Победил Иванов" << endl;
     else if (s2 >= s1 && s2 >= s3)
-        printf("Победил Петров\n");
+        cout << "Победил Петров" << endl;
     else
-        printf("Победил Сидоров\n");
+        cout << "Победил Сидоров" << endl;
 }
 
 // ---------- Лаба 4 ----------
@@ -200,7 +200,7 @@ void lab4()
     double s = 0;
     for (int n = 1; n <= 15; n++)
         s = s + 1 - 1 / pow(-2, n);
-    printf("a) S = %f\n", s);
+    cout << "a) S = " << s << endl;
 
     // б) максимум u
     double max = 0;
@@ -214,7 +214,7 @@ void lab4()
             imax = i;
         }
     }
-    printf("b) max = %f, i = %d\n", max, imax);
+    cout << "b) max = " << max << ", i = " << imax << endl;
 
     // в) сумма ряда с точностью 0.000001
     double x = 2, sum = 0, fact = 1, t = x;
@@ -226,7 +226,7 @@ void lab4()
         fact = fact * k;
         t = pow(-1, k) * pow(x, 2 * k + 1) / (fact * (2 * k + 1));
     }
-    printf("c) S = %f\n", sum);
+    cout << "c) S = " << sum << endl;
 
     // г) последовательность A
     double a0 = 1, a1 = 0.3, a2;
@@ -238,7 +238,7 @@ void lab4()
         a1 = a2;
         n++;
     } while (a1 > -0.5);
-    printf("d) n = %d, A = %f\n", n, a1);
+    cout << "d) n = " << n << ", A = " << a1 << endl;
 }
 
 int main()
